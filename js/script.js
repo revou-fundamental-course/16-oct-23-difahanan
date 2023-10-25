@@ -1,58 +1,77 @@
-// window.onload = setTimeout(synopsis,2000)
-// function synopsis() {
-//     // alert("HI, WELCOME TO MY WEBSITE ")
-// }
+// FUNCTION REPLACE NAME
+function replaceName() {
+    let NAMA = prompt("WHAT'S YOUR NAME ?", "")
+    document.getElementById("NaMe").innerHTML = NAMA
+}
 
-// function replaceName() {
-//     let NAMA = prompt("WHAT'S YOUR NAME ?", "")
-//     document.getElementById("NamE").innerHTML = NAMA
-// }
-
-// document.getElementById("tombol").addEventListener("click", function() {
-//     replaceName()
-// })
-
-// let nameInput = document.getElementById("name-input")
-
-// document.getElementById("kirim").addEventListener("click", function() {
-//     const nama = nameInput.value
-
-//     if (nAmA == "") {
-//         document.getElementById('error-name').innerHTML = "Nama tidak boleh kosong!"
-//     } else {
-//         document.getElementById('name').innerHTML=  nAmA
-//     }
-
-//     document.getElementById('name').innerHTML = nama
-// })
+    document.getElementById("tombol").addEventListener("click", function() {
+    replaceName()
+})
 
 // FUNCTION VALIDATE FORM
-// function validateForm() {
-//     const name = documents.forms["message-form"]["full-name"].value
-//     const birthDate = documents.forms["message-form"]["birth-date"].value
-//     const gender = documents.forms["message-form"]["gender"].value
-//     const messages = documents.forms["message-form"]["messages"].value
+function validateForm() {
+    const name = document.getElementById("nama").value
+    const birthDateInput = document.getElementById("tanggalLahir").value
+    const gender = document.querySelector('input[name="gender"]:checked')
+    const messages = document.getElementById("MesSage").value
+    const errorName = document.getElementById("error-name")
+    const errorDate = document.getElementById("error-date")
+    const errorGender = document.getElementById("error-gender")
+    const errorMessages = document.getElementById("error-messages")
 
-//     if(name === "" || birthDate === "" || gender === "" || messages === "") {
-//         alert("Tidak Boleh Ada Yang Kosong")
-//         return false
-//     }
+    errorName.textContent = ""
+    errorDate.textContent = ""
+    errorGender.textContent = ""
+    errorMessages.textContent = ""
 
-//     setSenderUI(name, birthDate, gender, messages)
+    if (name === "") {
+        errorName.textContent = "Nama tidak boleh kosong !"
+        return false
+    }
+    if (birthDateInput === "") {
+        errorDate.textContent = "Tanggal Lahir tidak boleh kosong !"
+        return false
+    }
+    // CHANGE FORMAT DATE
+    const birthDateComponents = birthDateInput.split("-")
+    const formattedBirthDate = birthDateComponents[2] + "-" + birthDateComponents[1] + "-" + birthDateComponents[0]
+    if (!gender) {
+        errorGender.textContent = "Jenis Kelamin harus dipilih !"
+        return false
+    }
+    if (messages === "") {
+        errorMessages.textContent = "Pesan tidak boleh kosong !"
+        return false
+    }
+    setSenderUI(name, formattedBirthDate, gender.value, messages)
 
-//     return false
-// }
+    document.getElementById("MESSAGE-US").reset()
 
-// FUNCTION SETSENDER UI
-// function setSenderUI(name, birthDate, gender, messages) {
-//     document.getElementById("sender-full-name").innerHTML = name
-//     document.getElementById("sender-birth-date").innerHTML = birthDate
-//     document.getElementById("sender-gender").innerHTML = gender
-//     document.getElementById("sender-messages").innerHTML = messages
-// }
+    return false
+}
+
+function setSenderUI(name, birthDate, gender, messages) {
+    document.getElementById("sender-full-name").textContent = "Nama : " + name
+    document.getElementById("sender-birth-date").textContent = "Tanggal lahir : " + birthDate
+    document.getElementById("sender-gender").textContent = "Jenis Kelamin : " + gender
+    document.getElementById("sender-messages").textContent = "Pesan : " + messages
+}
 
 // BANNER AUTOSLIDE
-let slideIndex = 1
+let slideIndex = 0
+const backgroundImages = [
+    "https://source.unsplash.com/random/1352x700?landscape&sig=1",
+    "https://source.unsplash.com/random/1352x700?landscape&sig=2",
+    "https://source.unsplash.com/random/1352x700?landscape&sig=3",
+    "https://source.unsplash.com/random/1352x700?landscape&sig=4",
+    "https://source.unsplash.com/random/1352x700?landscape&sig=5",
+    "https://source.unsplash.com/random/1352x700?landscape&sig=6",
+    "https://source.unsplash.com/random/1352x700?landscape&sig=7",
+    "https://source.unsplash.com/random/1352x700?landscape&sig=8",
+    "https://source.unsplash.com/random/1352x700?landscape&sig=9",
+    "https://source.unsplash.com/random/1352x700?landscape&sig=10"
+]
+
 showDivs(slideIndex)
 
 function plusDivs(n) {
@@ -60,21 +79,25 @@ function plusDivs(n) {
 }
 
 function showDivs(n) {
-    let i
-    let x = document.getElementsByClassName("img-slideshow")
-    if (n > x.length) {slideIndex = 1}
+    const openingRemarks = document.getElementById("openingRemarks")
 
-    if (n < 1) {slideIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none"
+    if (n >= backgroundImages.length) {
+        slideIndex = 0
     }
-    x[slideIndex-1].style.display = "block"
+    if (n < 0) {
+        slideIndex = backgroundImages.length - 1
+    }
+
+    openingRemarks.style.background = `url(${backgroundImages[slideIndex]})`
+    openingRemarks.style.backgroundSize = "cover"
+
+    startInterval()
+}
 
     function startInterval() {
         setTimeout(function() {
-            plusDivs(1);
-        }, 5000);
+            plusDivs(1)
+        }, 3000)
     }
-    
-    startInterval();
-}
+
+    startInterval()

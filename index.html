@@ -24,56 +24,86 @@
 
     <div id="HOME">
         <section id="openingRemarks" class="main-section animate__animated animate__zoomIn">
-                <h1 class="hasatu">Hi <span id="NamE">,</span> Welcome To Website</h1>
+                <h1 class="hasatu">Hi <span id="NaMe">,</span> Welcome To Website</h1>
                 <h5 class="halima">Ini adalah website latihan pertama</h5><br>
                 <button id="tombol">Ganti Nama</button>
         </section>
     </div>
 
-    <section>
-        <img src="https://source.unsplash.com/random/1352x800?landscape&sig=1" class="img-slideshow">
-        <img src="https://source.unsplash.com/random/1352x800?landscape&sig=2" class="img-slideshow">
-        <img src="https://source.unsplash.com/random/1352x800?landscape&sig=3" class="img-slideshow">
-        <img src="https://source.unsplash.com/random/1352x800?landscape&sig=4" class="img-slideshow">
-        <img src="https://source.unsplash.com/random/1352x800?landscape&sig=5" class="img-slideshow">
-    </section>
-
     <section id="OurHeadquarters">
         <h1 id="OUR-PROFILE">Our Headquarter</h1>
         <div class="CircleParent">
-            <div class="CircleChild1"><p class="jkt">Jakarta</p></div>
-            <div class="CircleChild2"><p class="bdg">Bandung</p></div>
-            <div class="CircleChild3"><p class="sby">Surabaya</p></div>
+            <div class="CircleChild1">
+                <p class="msk">Moskow</p>
+                <div class="JOIN">
+                    <div class="join1">
+                        <p class="abt">about the company : a company that makes dangerous weapons</p>
+                    </div>
+                    <div class="join2">
+                        <p class="vms">vision and mission: Making deadly weapons for war</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="CircleChild2">
+                <p class="dbi">Dubai</p>
+                <div class="JOIN">
+                    <div class="join1">
+                        <p class="abt">about the company : a company that manages oil and gas</p>
+                    </div>
+                    <div class="join2">
+                        <p class="vms">vision and mission: managing natural resources</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="CircleChild3">
+                <p class="osk">Osaka</p>
+                <div class="JOIN">
+                    <div class="join1">
+                        <p class="abt">about the company: a company that has appeal in terms of the arts</p>
+                    </div>
+                    <div class="join2">
+                        <p class="vms">vision and mission: managing excellent regional specialties</p>
+                    </div>
+                </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <form class="wrap" id="MESSAGE-US">
-        <section id="MessageUsForm">
-            <h2>Message Us</h2><br>
+    <form class="wrap" id="MESSAGE-US" onsubmit="return validateForm()">
+        <section id="MessageUsForm" name="message-form">
+            <h2 class="MU">Message Us</h2><br>
 
-            Nama &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <input type="text" id="NAMA" name="full-name" placeholder="Nama"  required><br><br>
-            Tanggal Lahir &nbsp;: <input type="date" id="TANGGALLAHIR" name="birth-date" required><br><br>
+            Nama &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <input type="text" id="nama" name="full-name" placeholder="Nama"><br><br>
+            <p class="peAlert" id="error-name"></p>
 
-            Jenis Kelamin &nbsp;: <input type="radio" id="male" name="gender" required>
-                            <label for="male">Laki-Laki</label>
-                            <input type="radio" id="female" name="gender">
-                            <label for="female">Perempuan</label><br><br>
+            Tanggal Lahir &nbsp;: <input type="date" id="tanggalLahir" name="birth-date"><br><br>
+            <p class="peAlert" id="error-date"></p>
+
+            Jenis Kelamin &nbsp;:
+            <input type="radio" id="Laki-Laki" name="gender" value="Laki-Laki" >
+            <label for="male">Laki-Laki</label>
+            <input type="radio" id="Perempuan" name="gender" value="Perempuan" >
+            <label for="female">Perempuan</label><br><br>
+            <p class="peAlert" id="error-gender"></p>
 
             <div class="pesan">
-                Pesan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;<textarea name="messages" placeholder="Pesan" required></textarea><br><br>
+                Pesan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;<textarea name="messages" placeholder="Pesan" class="pesan" id="MesSage"></textarea><br><br>
             </div>
+            <p class="peAlert" id="error-messages"></p>
 
-            <br><button type="submit">Submit</button>
-            <p id="error-name"></p>
+            <br><button type="submit" id="kirim">Submit</button>
         </section>
-        
+
         <section id="boxParent">
             <div class="boxChild" id="PORTOFOLIO">
-                    <h5>Current time : Sunday Oktober 22 2023 10:42:28 GMT+0100</h5><br>
-                    <h5>Nama : Difa' Hanan</h5>
-                    <h5>Tanggal lahir : 14/10/2003</h5>
-                    <h5>Jenis Kelamin : Laki-Laki</h5>
-                    <h5>Pesan : Lagi Belajar Buat Website</h5>
+                <h5 id="timeCreated">Current time : Sunday Oktober 22 2023 10:42:28 GMT+0100</h5><br>
+                <h5 id="sender-full-name">Nama : </h5>
+                <h5 id="sender-birth-date">Tanggal lahir : </h5>
+                <h5 id="sender-gender">Jenis Kelamin : </h5>
+                <h5 id="sender-messages">Pesan : </h5>
             </div>
         </section>
     </form>
