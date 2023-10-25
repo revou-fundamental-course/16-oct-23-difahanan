@@ -39,14 +39,14 @@ header {
 }
 
 /* REVOU LOGO */
-img {
+#nav-logo {
     height: 80px;
     padding: 10px;
     cursor: pointer;
     border-radius: 200px;
 }
 
-img:hover {
+#nav-logo:hover {
     height: 100px;
     padding: 1px;
     transition: 0.3s;
@@ -86,16 +86,17 @@ img:hover {
 
 /* SECTION OPENING REMARKS */
 #openingRemarks {
-    padding: 230px;
+    /* padding: 230px; */
+    padding: 2em;
     text-align: center;
     font-size: 30px;
+    height: 7em;
     text-shadow: 0px 0px 10px blue;
-    background: url(/assets/d1.jpg);
-    background-size: cover;
+    /* background: url(/assets/d1.jpg); */
+    /* background-size: cover; */
 }
 
 .hasatu, .halima{
-    
     cursor: pointer;
 }
 
@@ -103,6 +104,10 @@ img:hover {
 .halima:hover {
     color: red;
 }
+/* 
+.img-slideshow {
+    
+} */
 
 /* SECTION OUR HEADQUARTERS */
 #OurHeadquarters {
@@ -117,12 +122,6 @@ img:hover {
     display: flex;
     justify-content: space-around;
 }
-
-/* .CircleParent:hover {
-    display: flex;
-    color: red;
-    justify-content: space-around;
-} */
 
 /* CIRCLE CHILD */
 .CircleChild1, .CircleChild2, .CircleChild3 {
@@ -222,7 +221,7 @@ button:hover {
     background-color: #662e1c;
 }
 
-#boxChild{
+.boxChild{
     border: 1px solid;
     padding: 20px;
     background: chartreuse;
@@ -268,25 +267,35 @@ li a:hover {
 
 /* EXTRA SMALL DEVICES (PHONES, 600PX AND DOWN */
 @media only screen and (max-width: 600px) {
-    
+    body {
+        background-color: red;
+    }
 }
 
 /* SMALL DEVICES (PORTRAIT TABLETS AND LARGE PHONES, 600PX AND UP */
 @media only screen and (min-width: 600px) {
-    
+    body {
+        background-color: green;
+    }
 }
 
 /* MEDIUM DEVICES (LANDSCAPE TABLETS, 768PX AND UP */
 @media only screen and (min-width: 768px) {
-    
+    body {
+        background-color: blue;
+    }
 }
 
 /* LARGE DEVICES (LAPTOPS/DESKTOPS, 992PX AND UP */
 @media only screen and (min-width: 992px) {
-    
+    body {
+        background-color: yellow;
+    }
 }
 
 /* EXTRA LARGE DEVICES (LARGE LAPTOPS AND DESKTOPS, 1200PX AND UP */
 @media only screen and (min-width: 1200px) {
-    
+    body {
+        background-color: khaki;
+    }
 }
