@@ -3,10 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <title>My Website</title>
 </head>
 <body>
+
+    <header>
+        <div class="nav-logo">
+            <img src="assets/revou-logo.png" alt="revou-logo">
+        </div>
+
+        <nav id="nav">
+            <a href="#HOME" id="Home">Home</a>
+            <a href="#OUR-PROFILE" id="OurProfile">Our Profile</a>
+            <a href="#PORTOFOLIO"  id="Portofolio">Portofolio</a>
+            <a href="#MESSAGE-US" id="MessageUs">Message Us</a>
+        </nav>
+    </header>
+
+    <div id="HOME">
+        <section id="openingRemarks" class="main-section animate__animated animate__zoomIn">
+                <h1 class="hasatu">Hi <span id="NamE">,</span> Welcome To Website</h1>
+                <h5 class="halima">Ini adalah website latihan pertama</h5><br>
+                <button id="tombol">Ganti Nama</button>
+        </section>
+    </div>
+
+    <section id="OurHeadquarters">
+        <h1 id="OUR-PROFILE">Our Headquarter</h1>
+        <div class="CircleParent">
+            <div class="CircleChild1"><p class="jkt">Jakarta</p></div>
+            <div class="CircleChild2"><p class="bdg">Bandung</p></div>
+            <div class="CircleChild3"><p class="sby">Surabaya</p></div>
+        </div>
+    </section>
+
+    <form class="wrap" id="MESSAGE-US">
+        <section id="MessageUsForm">
+            <h2>Message Us</h2><br>
+
+            Nama &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <input type="text" id="NAMA" name="full-name" placeholder="Nama"  required><br><br>
+            Tanggal Lahir &nbsp;: <input type="date" id="TANGGALLAHIR" name="birth-date" required><br><br>
+
+            Jenis Kelamin &nbsp;: <input type="radio" id="male" name="gender" required>
+                            <label for="male">Laki-Laki</label>
+                            <input type="radio" id="female" name="gender">
+                            <label for="female">Perempuan</label><br><br>
+
+            <div class="pesan">
+                Pesan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;<textarea name="messages" placeholder="Pesan" required></textarea><br><br>
+            </div>
+
+            <br><button type="submit">Submit</button>
+            <p id="error-name"></p>
+        </section>
+        
+        <section id="boxParent">
+            <div id="boxChild">
+                    <h5>Current time : Sunday Oktober 22 2023 10:42:28 GMT+0100</h5><br>
+                    <h5>Nama : Difa' Hanan</h5>
+                    <h5>Tanggal lahir : 14/10/2003</h5>
+                    <h5>Jenis Kelamin : Laki-Laki</h5>
+                    <h5>Pesan : Lagi Belajar Buat Website</h5>
+            </div>
+        </section>
+    </form>
+
+    <footer>
+        <div class="ChildFooter">
+            <li>Created By&nbsp;&nbsp;<a href="https://github.com/difahanan">Difa</a></li>
+        </div>
+    </footer>
 
     <script src="js/script.js"></script>
 
