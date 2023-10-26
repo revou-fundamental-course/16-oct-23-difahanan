@@ -15,91 +15,85 @@
         </div>
 
         <nav id="nav">
-            <a href="#HOME" id="Home">Home</a>
-            <a href="#OUR-PROFILE" id="OurProfile">Our Profile</a>
-            <a href="#PORTOFOLIO"  id="Portofolio">Portofolio</a>
-            <a href="#MESSAGE-US" id="MessageUs">Message Us</a>
+            <a href="#HOME" id="home">Home</a>
+            <a href="#OUR-PROFILE" id="our-profile">Our Profile</a>
+            <a href="#PORTOFOLIO"  id="portofolio">Portofolio</a>
+            <a href="#MESSAGE-US" id="message-us">Message Us</a>
         </nav>
     </header>
 
     <div id="HOME">
-        <section id="openingRemarks" class="main-section animate__animated animate__zoomIn">
-                <h1 class="hasatu">Hi <span id="NaMe">,</span> Welcome To Website</h1>
-                <h5 class="halima">Ini adalah website latihan pertama</h5><br>
-                <button id="tombol">Ganti Nama</button>
+        <section id="opening-remarks" class="main-section animate__animated animate__zoomIn">
+                <h1 class="hi">Hi <span id="hi">,</span> Welcome To Website</h1>
+                <h5 class="this">Ini adalah website latihan pertama</h5><br>
+                <button id="change-name">Change Your Name Bro</button>
         </section>
     </div>
 
-    <section id="OurHeadquarters">
-        <h1 id="OUR-PROFILE">Our Headquarter</h1>
-        <div class="CircleParent">
-            <div class="CircleChild1">
-                <p class="msk">Moskow</p>
-                <div class="JOIN">
-                    <div class="join1">
-                        <p class="abt">about the company : a company that makes dangerous weapons</p>
-                    </div>
-                    <div class="join2">
-                        <p class="vms">vision and mission: Making deadly weapons for war</p>
-                    </div>
+    <section id="our-headquarter">
+        <h1 id="OUR-PROFILE" class="ours-headquarter">Our Headquarter</h1>
+        <div class="circle-parent">
+            <div class="circle-child-left">
+                <h1 class="name-company-moskow">Moskow</h1>
+                <div class="join-left">
+                    <h3 class="about-title">About The Company</h3>
+                    <h3 class="about-content">a company that makes dangerous weapons</h3>
+                    <h3 class="vision-mission-title">Vision And Mission</h3>
+                    <h3 class="vision-mission-content">Making deadly weapons for war</h3>
                 </div>
             </div>
 
-            <div class="CircleChild2">
-                <p class="dbi">Dubai</p>
-                <div class="JOIN">
-                    <div class="join1">
-                        <p class="abt">about the company : a company that manages oil and gas</p>
-                    </div>
-                    <div class="join2">
-                        <p class="vms">vision and mission: managing natural resources</p>
-                    </div>
+            <div class="circle-child-center">
+                <h1 class="name-company-dubai">Dubai</h1>
+                <div class="join-center">
+                    <h3 class="about-title">About The Company</h3>
+                    <h3 class="about-content">a company that manages oil and gas</h3>
+                    <h3 class="vision-mission-title">Vision And Mission</h3>
+                    <h3 class="vision-mission-content">managing natural resources</h3>
                 </div>
             </div>
 
-            <div class="CircleChild3">
-                <p class="osk">Osaka</p>
-                <div class="JOIN">
-                    <div class="join1">
-                        <p class="abt">about the company: a company that has appeal in terms of the arts</p>
-                    </div>
-                    <div class="join2">
-                        <p class="vms">vision and mission: managing excellent regional specialties</p>
-                    </div>
+            <div class="circle-child-right">
+                <h1 class="name-company-osaka">Osaka</h1>
+                <div class="join-right">
+                    <h3 class="about-title">About The Company</h3>
+                    <h3 class="about-content">a company that has appeal in terms of the arts</h3>
+                    <h3 class="vision-mission-title">Vision And Mission</h3>
+                    <h3 class="vision-mission-content">managing excellent regional specialties</h3>
                 </div>
-                </div>
+            </div>
             </div>
         </div>
     </section>
 
     <form class="wrap" id="MESSAGE-US" onsubmit="return validateForm()">
-        <section id="MessageUsForm" name="message-form">
-            <h2 class="MU">Message Us</h2><br>
+        <section id="message-us-form" name="message-form">
+            <h2 class="mu">Message Us</h2><br>
 
             Nama &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <input type="text" id="nama" name="full-name" placeholder="Nama"><br><br>
-            <p class="peAlert" id="error-name"></p>
+            <p class="alert" id="error-name"></p>
 
-            Tanggal Lahir &nbsp;: <input type="date" id="tanggalLahir" name="birth-date"><br><br>
-            <p class="peAlert" id="error-date"></p>
+            Tanggal Lahir &nbsp;: <input type="date" id="tanggal-lahir" name="birth-date"><br><br>
+            <p class="alert" id="error-date"></p>
 
             Jenis Kelamin &nbsp;:
-            <input type="radio" id="Laki-Laki" name="gender" value="Laki-Laki" >
+            <input type="radio" id="gender" name="gender" value="gender">
             <label for="male">Laki-Laki</label>
-            <input type="radio" id="Perempuan" name="gender" value="Perempuan" >
+            <input type="radio" id="gender" name="gender" value="gender">
             <label for="female">Perempuan</label><br><br>
-            <p class="peAlert" id="error-gender"></p>
+            <p class="alert" id="error-gender"></p>
 
             <div class="pesan">
-                Pesan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;<textarea name="messages" placeholder="Pesan" class="pesan" id="MesSage"></textarea><br><br>
+                Pesan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;<textarea name="messages" placeholder="Pesan" class="pesan" id="message"></textarea><br><br>
             </div>
-            <p class="peAlert" id="error-messages"></p>
+            <p class="alert" id="error-messages"></p>
 
-            <br><button type="submit" id="kirim">Submit</button>
+            <br><button type="submit">Submit</button>
         </section>
 
-        <section id="boxParent">
-            <div class="boxChild" id="PORTOFOLIO">
-                <h5 id="timeCreated">Current time : Sunday Oktober 22 2023 10:42:28 GMT+0100</h5><br>
+        <section id="box-parent">
+            <div class="box-child" id="PORTOFOLIO">
+                <h5 id="time-created">Current time : Sunday Oktober 22 2023 10:42:28 GMT+0100</h5><br>
                 <h5 id="sender-full-name">Nama : </h5>
                 <h5 id="sender-birth-date">Tanggal lahir : </h5>
                 <h5 id="sender-gender">Jenis Kelamin : </h5>
@@ -109,7 +103,7 @@
     </form>
 
     <footer>
-        <div class="ChildFooter">
+        <div class="footer-word">
             <li>Created By&nbsp;&nbsp;<a href="https://github.com/difahanan">Difa</a></li>
         </div>
     </footer>

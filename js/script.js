@@ -1,19 +1,27 @@
-// FUNCTION REPLACE NAME
 function replaceName() {
     let NAMA = prompt("WHAT'S YOUR NAME ?", "")
-    document.getElementById("NaMe").innerHTML = NAMA
+    document.getElementById("hi").innerHTML = NAMA
 }
 
-    document.getElementById("tombol").addEventListener("click", function() {
+    document.getElementById("change-name").addEventListener("click", function() {
     replaceName()
 })
 
-// FUNCTION VALIDATE FORM
+// FOR SHOW/HIDE LIST NAV ITEMS IN MOBILE DEVICE
+function toggleNav() {
+    let nav = document.getElementById("nav")
+    if (nav.style.display === "block") {
+        nav.style.display = "none"
+    } else {
+        nav.style.display = "block"
+    }
+}
+
 function validateForm() {
     const name = document.getElementById("nama").value
-    const birthDateInput = document.getElementById("tanggalLahir").value
+    const birthDateInput = document.getElementById("tanggal-lahir").value
     const gender = document.querySelector('input[name="gender"]:checked')
-    const messages = document.getElementById("MesSage").value
+    const messages = document.getElementById("message").value
     const errorName = document.getElementById("error-name")
     const errorDate = document.getElementById("error-date")
     const errorGender = document.getElementById("error-gender")
@@ -26,18 +34,15 @@ function validateForm() {
 
     if (name === "") {
         errorName.textContent = "Nama tidak boleh kosong !"
-        return false
     }
     if (birthDateInput === "") {
         errorDate.textContent = "Tanggal Lahir tidak boleh kosong !"
-        return false
     }
     // CHANGE FORMAT DATE
     const birthDateComponents = birthDateInput.split("-")
     const formattedBirthDate = birthDateComponents[2] + "-" + birthDateComponents[1] + "-" + birthDateComponents[0]
     if (!gender) {
         errorGender.textContent = "Jenis Kelamin harus dipilih !"
-        return false
     }
     if (messages === "") {
         errorMessages.textContent = "Pesan tidak boleh kosong !"
@@ -79,7 +84,7 @@ function plusDivs(n) {
 }
 
 function showDivs(n) {
-    const openingRemarks = document.getElementById("openingRemarks")
+    const openingRemarks = document.getElementById("opening-remarks")
 
     if (n >= backgroundImages.length) {
         slideIndex = 0
