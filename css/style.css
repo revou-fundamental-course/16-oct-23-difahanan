@@ -378,6 +378,14 @@ header {
     box-shadow: 6px 6px black;
 }
 
+.two-point {
+    padding-left: 4em;
+}
+
+.two-point-message {
+    padding-left: 4.4em;
+}
+
 #gender {
     cursor: pointer;
 }
